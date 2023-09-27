@@ -6,15 +6,13 @@
  * This project uses @Incubating APIs which are subject to change.
  */
 
-group = "com.github.amulittle"
-version = "0.1.0"
-
 plugins {
     // Apply the org.jetbrains.kotlin.jvm Plugin to add support for Kotlin.
     id("org.jetbrains.kotlin.jvm") version "1.9.0"
 
     // Apply the java-library plugin for API and implementation separation.
     `java-library`
+    `maven-publish`
 }
 
 repositories {
@@ -45,4 +43,16 @@ java {
     toolchain {
         languageVersion.set(JavaLanguageVersion.of(20))
     }
+}
+
+publishing {
+  publications {
+    create<MavenPublication>("maven") {
+      groupId = "com.github.amulittle"
+      artifactId = "libbluefoxgame"
+      version = "0.1.0"
+
+      from(components["java"])
+    }
+  }
 }
