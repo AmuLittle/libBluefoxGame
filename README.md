@@ -1,2 +1,2 @@
 # libBluefoxGame
-The Interface between BlueoxGame and its plugins
+The Interface between BluefoxGame and its plugins
