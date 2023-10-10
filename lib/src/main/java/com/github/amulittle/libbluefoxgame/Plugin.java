@@ -7,7 +7,7 @@ public class Plugin {
     public String Name = "Default";
     public String[] Description = new String[] {"Default"};
     
-    Plugin() {
+    public Plugin() {
     	
     }
 }
