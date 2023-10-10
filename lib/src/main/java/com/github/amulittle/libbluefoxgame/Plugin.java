@@ -3,7 +3,11 @@
  */
 package com.github.amulittle.libbluefoxgame;
 
-public interface IPlugin {
+public class Plugin {
     public String Name = "Default";
     public String[] Description = new String[] {"Default"};
+    
+    Plugin() {
+    	
+    }
 }
